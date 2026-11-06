@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>AI Video Clip Maker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header><div class="mark">▶</div><div><h1>AI Video Clip Maker</h1><p>Turn long videos into ready-to-share clips</p></div></header>
+    <section class="panel">
+      <h2>Upload your video</h2>
+      <label class="drop" for="video"><span class="upload">＋</span><b>Choose a video</b><small>MP4, MOV, MKV, AVI, WEBM</small><input id="video" type="file" accept="video/*"></label>
+      <div id="filename" class="muted">No video selected</div>
+      <div class="settings">
+        <label>Clip length<select id="duration"><option value="60">1 minute</option><option value="30">30 seconds</option><option value="90">90 seconds</option><option value="120">2 minutes</option></select></label>
+        <label>Format<select id="format"><option value="vertical">9:16 Vertical (Shorts/Reels/TikTok)</option><option value="original">Keep original frame</option></select></label>
+      </div>
+      <label class="check"><input type="checkbox" id="smart"> Rank clips by Smart Highlights (audio + scene activity)</label>
+      <button id="go">Create clips</button>
+      <div id="status" class="muted" role="status"></div>
+    </section>
+    <section id="results" class="panel hidden"><h2>Your clips</h2><div id="cliplist"></div></section>
+    <footer>Local processing through your own FFmpeg server. Keep this page open while processing.</footer>
+  </main>
+  <script src="app.js"></script>
+</body></html>

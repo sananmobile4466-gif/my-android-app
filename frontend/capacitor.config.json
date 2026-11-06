@@ -1,0 +1,8 @@
+{
+  "appId": "com.example.aivideoclipmaker",
+  "appName": "AI Video Clip Maker",
+  "webDir": "www",
+  "server": {
+    "cleartext": true
+  }
+}
